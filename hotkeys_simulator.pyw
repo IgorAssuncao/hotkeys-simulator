@@ -1,31 +1,17 @@
 """
 Author: Igor Assuncao
-Desc: Script to simulate numpad Hotkeys using their Virtual Key Codes
+Desc: Script to simulate Hotkeys using their Virtual Key Codes,
+        in this case I'm simulating some numpad keys.
 """
 
 from pynput import keyboard
 from pynput.keyboard import Key, Controller
 
 """
-#   Key          Virtual Key Code
-# 1			49
-# 2			50
-# 3			51
-# 4			52
-# 5			53
-# 6			54
-# 7			55
-# 8			56
-# 9			57
-# 0			48
-# Numpad 1		97
-# Numpad 2		98
-# Numpad 3		99
-# Numpad 4		100
-# Numpad 5		101
-# Numpad 6		102
-# Numpad 7		103
-# Numpad 8		104
+Check this link for the virtual key codes:
+    https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
+Please, keep in mind that their using their 0x<HexValues>, for example
+Numpad 0 = 0x60, so you have to convert the HexValue to Decimal in order to use properly.
 """
 
 keyboardController = Controller()
